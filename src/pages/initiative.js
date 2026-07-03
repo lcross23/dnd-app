@@ -57,12 +57,12 @@ export default function App() {
 
   return (
     <div style={{ padding: 16, fontFamily: "sans-serif" }}>
-      <h2>Table</h2>
+      <h2>Initiative Table</h2>
 
       <form onSubmit={addRow} style={{ display: "flex", gap: 8, marginBottom: 12 }}>
         <input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
         <input
-          placeholder="Value"
+          placeholder="Initiative"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           inputMode="decimal"
@@ -75,7 +75,7 @@ export default function App() {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Value</th>
+            <th>Initiative</th>
           </tr>
         </thead>
         <tbody>
