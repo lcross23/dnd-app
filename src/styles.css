@@ -1,0 +1,59 @@
+body {
+  background-color: #290000;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.loading {
+  color: #f7ce65;
+}
+
+.spell-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.spell-card {
+  background-color: #f7ce65;
+  border-radius: 1rem;
+}
+
+.spell-card {
+  list-style: none;
+  max-width: 256px;
+  padding: 4px;
+}
+
+.spell-card hgroup {
+  margin-bottom: 4px;
+}
+
+.spell-card hgroup h4 {
+  color: #930c10;
+  margin-bottom: 4px;
+}
+
+.spell-card .stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.spell-card .stats strong {
+  color: #030303;
+  text-align: center;
+}
+
+.spell-card .stats p {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+  font-size: 0.75rem;
+}
