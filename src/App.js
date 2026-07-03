@@ -1,24 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink, useLocation } from "react-router-dom";
-import { Tabs, Tab, Box } from "@mui/material";
-import Condition from "./pages/conditions";
-import Itracking from "./pages/itracking";
-import Spell from "./pages/spells";
-import Home from "./pages/home";
+// ...other imports
 
 function AppTabs() {
   const location = useLocation();
-
   const tabValue =
-    location.pathname === "/"
-      ? 0
-      : location.pathname === "/itracking"
-      ? 1
-      : location.pathname === "/condition"
-      ? 2
-      : location.pathname === "/spell"
-      ? 3
-      : false;
+    location.pathname === "/" ? 0 :
+    location.pathname === "/itracking" ? 1 :
+    location.pathname === "/condition" ? 2 :
+    location.pathname === "/spell" ? 3 :
+    false;
 
   return (
     <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -34,7 +25,7 @@ function AppTabs() {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <AppTabs />
       <Routes>
         <Route path="/" element={<Home />} />
